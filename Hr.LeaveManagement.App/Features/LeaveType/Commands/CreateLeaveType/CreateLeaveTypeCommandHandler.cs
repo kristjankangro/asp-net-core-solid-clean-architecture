@@ -4,15 +4,10 @@ using MediatR;
 
 namespace Hr.LeaveManagement.App.Features.LeaveType.Commands.CreateLeaveType;
 
-public class CreateLeaveTypeCommandHandler : IRequestHandler<CreateLeaveTypeCommand, int>
+public class CreateLeaveTypeCommandHandler : LeaveTypeHandlerBase, IRequestHandler<CreateLeaveTypeCommand, int>
 {
-	private readonly IMapper _mapper;
-	private readonly ILeaveTypeRepo _leaveTypeRepo;
-
-	public CreateLeaveTypeCommandHandler(IMapper mapper, ILeaveTypeRepo leaveTypeRepo)
+	public CreateLeaveTypeCommandHandler(IMapper mapper, ILeaveTypeRepo leaveTypeRepo) : base(mapper, leaveTypeRepo)
 	{
-		_mapper = mapper;
-		_leaveTypeRepo = leaveTypeRepo;
 	}
 
 	public async Task<int> Handle(CreateLeaveTypeCommand request, CancellationToken cancellationToken)
