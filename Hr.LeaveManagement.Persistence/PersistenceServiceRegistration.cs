@@ -12,9 +12,6 @@ public static class PersistenceServiceRegistration
 	public static IServiceCollection AddPersistenceServices(this IServiceCollection services,
 		IConfiguration configuration)
 	{
-		// services.AddScoped<ILeaveTypeRepo, LeaveTypeRepo>();
-		// services.AddScoped<ILeaveRequestRepo, LeaveRequestRepo>();
-		// services.AddScoped(typeof(IGenericRepo<>), typeof(GenericRepo<>));
 		services.AddDbContext<HrDbContext>(options => options
 			.UseSqlServer(configuration.GetConnectionString("DefaultConnection") ?? string.Empty)
 		);
