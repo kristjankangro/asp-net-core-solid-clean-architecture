@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Hr.LeaveManagement.App;
 /// <summary>
-/// 11m
+/// 11m.min
 /// </summary>
 public static class AppServiceRegistration
 {
