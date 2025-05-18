@@ -3,7 +3,9 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Hr.LeaveManagement.App;
-
+/// <summary>
+/// 
+/// </summary>
 public static class AppServiceRegistration
 {
 	public static IServiceCollection AddAppServices(this IServiceCollection services)
