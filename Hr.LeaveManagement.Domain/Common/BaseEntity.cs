@@ -1,5 +1,8 @@
 namespace Hr.LeaveManagement.Domain.Common;
 
+/// <summary>
+/// Test
+/// </summary>
 public abstract class BaseEntity
 {
 	public int Id { get; set; }
