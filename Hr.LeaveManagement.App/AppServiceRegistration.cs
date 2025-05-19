@@ -6,6 +6,7 @@ namespace Hr.LeaveManagement.App;
 /// <summary>
 /// 11m.min
 /// increase fix
+/// increase fix 2
 /// </summary>
 public static class AppServiceRegistration
 {
