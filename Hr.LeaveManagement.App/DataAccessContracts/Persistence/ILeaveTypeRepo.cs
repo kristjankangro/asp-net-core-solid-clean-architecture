@@ -1,6 +1,7 @@
+using Hr.LeaveManagement.App.Contracts.Persistence;
 using Hr.LeaveManagement.Domain;
 
-namespace Hr.LeaveManagement.App.Contracts.Persistence;
+namespace Hr.LeaveManagement.App.DataAccessContracts.Persistence;
 
 public interface ILeaveTypeRepo : IGenericRepo<LeaveType>
 {
