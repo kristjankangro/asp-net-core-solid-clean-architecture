@@ -33,8 +33,11 @@ public class LeaveAllocationRepo : GenericRepo<LeaveAllocation>, ILeaveAllocatio
 			               && x.LeaveTypeId == leaveTypeId
 			               && x.Period == period);
 
-	public async Task AddAllocations(List<LeaveAllocation> allocations) =>
+	public async Task AddAllocations(List<LeaveAllocation> allocations)
+	{
 		await _context.LeaveAllocations.AddRangeAsync(allocations);
+		await _context.SaveChangesAsync();
+	}
 
 	public async Task<List<LeaveAllocation>> GetUserAllocations(string userId, int leaveTypeId) =>
 		await _context.LeaveAllocations

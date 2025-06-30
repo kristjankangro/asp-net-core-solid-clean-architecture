@@ -11,12 +11,10 @@ public class LeaveRequestRepo : GenericRepo<LeaveRequest>, ILeaveRequestRepo
 	{
 	}
 
-	public Task<LeaveRequest> GetLeaveRequestWithDetails(int id)
-	{
-		return _context.LeaveRequests
+	public Task<LeaveRequest> GetLeaveRequestWithDetails(int id) =>
+		_context.LeaveRequests
 			.Include(lr => lr.LeaveType)
 			.FirstOrDefaultAsync(x => x.Id == id);
-	}
 
 	public async Task<List<LeaveRequest>> GetLeaveRequestsWithDetails() =>
 		await _context.LeaveRequests
@@ -25,7 +23,7 @@ public class LeaveRequestRepo : GenericRepo<LeaveRequest>, ILeaveRequestRepo
 
 	public async Task<List<LeaveRequest>> GetLeaveRequestsWithDetails(string userId) =>
 		await _context.LeaveRequests
-			.Where(x => x.RequestingEmployeeId  == userId)
+			.Where(x => x.RequestingEmployeeId == userId)
 			.Include(lr => lr.LeaveType)
 			.ToListAsync();
 }
