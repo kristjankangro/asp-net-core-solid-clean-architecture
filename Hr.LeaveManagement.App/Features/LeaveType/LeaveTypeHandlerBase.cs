@@ -1,5 +1,6 @@
 using AutoMapper;
 using Hr.LeaveManagement.App.Contracts.Persistence;
+using Hr.LeaveManagement.App.DataAccessContracts.Persistence;
 
 namespace Hr.LeaveManagement.App.Features.LeaveType;
 
