@@ -2,7 +2,7 @@ namespace Hr.LeaveManagement.App;
 
 public class TEst
 {
-	public TEst(bool isA, bool isB, bool isC, bool isD, bool isE)
+	public void Execute(bool isA, bool isB, bool isC, bool isD, bool isE)
 	{
 		if (isA && isB)
 		{
