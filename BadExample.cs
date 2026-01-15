@@ -1,4 +1,9 @@
-// Violates KISS - overcomplicated for a simple task
+// BAD EXAMPLE - Violates KISS (Keep It Simple, Stupid)
+// This class is overcomplicated for a simple task of adding two numbers.
+// Problems:
+// - Unnecessary dependencies (logger, validator, cache)
+// - Over-engineered solution for a trivial operation
+// - Harder to test, maintain, and understand
 public class NumberAdder
 {
     private readonly ILogger _logger;
@@ -29,7 +34,8 @@ public class NumberAdder
     }
 }
 
-// KISS version - simple and direct
+// GOOD EXAMPLE - Follows KISS principle
+// Simple, direct, easy to understand and test
 public class SimpleAdder
 {
     public int Add(int a, int b) => a + b;
